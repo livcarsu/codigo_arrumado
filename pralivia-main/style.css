@@ -634,9 +634,7 @@ height: 300px;
 
 }
  
-.loginForm{
- 
-}
+
 
 .caixaLogin{
     display: flex;
@@ -691,7 +689,6 @@ height: 300px;
 
 /*AVATARES*/
 
-
 .avatares{
     display: flex;
     flex-direction: row;
@@ -701,15 +698,20 @@ height: 300px;
     justify-content: space-between;
 }
 
- 
 
-.leao:hover, .orca:hover, .rena:hover{
+.avatar:hover{
     width: 160px;
     opacity: 1;
 }
-.leao, .orca, .rena{
+.avatar{
    opacity: 0.6;
    border-radius: 100%;
+}
+
+.selected {
+    border: 3px solid red;
+    opacity: 1;
+    width: 170px;
 }
 
 .selected {
