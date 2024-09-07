@@ -41,7 +41,7 @@ function showNextModal(modalId) {
 
 // Exibe a primeira modal ao clicar no botão "INICIAR TESTE"
 document.querySelector('.btnIniciar').addEventListener('click', function() {
-    showNextModal('modal2');
+    showNextModal('modal1');
 });
 
 function closeModal(modalId) {
@@ -72,6 +72,24 @@ function showContent(contentId) {
 
 
 // AVATARES
+
+// Variável para armazenar a seleção do avatar
+let isAvatarSelected = false;
+
+// Adiciona evento de clique em cada imagem de avatar
+document.querySelectorAll('.avatar').forEach(avatar => {
+    avatar.addEventListener('click', function() {
+        // Remove a seleção de todos os avatares
+        document.querySelectorAll('.avatar').forEach(img => img.classList.remove('selected'));
+        
+        // Marca a imagem clicada como selecionada
+        this.classList.add('selected');
+        isAvatarSelected = true; // Marca que um avatar foi selecionado
+        
+        // Oculta a mensagem de erro
+        document.getElementById('errorMessage').style.display = 'none';
+    });
+});
 
 
 const images = [
